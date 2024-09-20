@@ -1,0 +1,117 @@
+/* Navbar.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+  }
+  
+  .navbar .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li , .active{
+    position: relative;
+    color: white;
+    padding: 10px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links li:hover, .active{
+    background-color: #444;
+    cursor: pointer;
+  }
+  
+  /* Mega Menu */
+  .mega-menu {
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    width: 600px;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .dropdown:hover .mega-menu{
+    display: flex; /* Ensure the mega menu is visible */
+  }
+  
+  .mega-menu-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  /* .mega-menu .column {
+    width: 45%;
+  } */
+  
+  .mega-menu .column h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .mega-menu .column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .mega-menu .column ul li {
+    padding: 5px 0;
+  }
+  
+  .mega-menu .column ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .mega-menu .column ul li:hover a {
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .mega-menu {
+      position: static;
+      width: 100%;
+    }
+  }
+  
